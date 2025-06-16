@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>AI Lead Filter Waitlist</title>
+  <title>LeadFilter – Invite-Only Alpha Waiting List</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
@@ -21,8 +21,18 @@
       max-width: 400px;
       width: 100%;
     }
-    h1 { margin-bottom: 1rem; font-size: 1.5rem; }
-    label { display: block; margin-top: 1rem; font-size: 0.9rem; }
+    h1 { margin-bottom: 0.5rem; font-size: 1.5rem; }
+    p { margin-bottom: 1rem; color: #ccc; line-height: 1.4; }
+    .scarcity {
+      color: #facc15;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
     input {
       width: 100%;
       padding: 0.75rem;
@@ -31,6 +41,7 @@
       border-radius: 4px;
       background: #2c2c2c;
       color: #eee;
+      box-sizing: border-box;
     }
     button {
       margin-top: 1.5rem;
@@ -43,32 +54,45 @@
       color: white;
       cursor: pointer;
     }
-    .success { color: #4ade80; margin-top: 1rem; }
+    .fallback {
+      font-size: 0.85rem;
+      margin-top: 0.5rem;
+    }
+    .fallback a {
+      color: #3b82f6;
+      text-decoration: none;
+    }
+    .success {
+      color: #4ade80;
+      margin-top: 1rem;
+    }
   </style>
 </head>
 <body>
   <div class="card">
-  <h1>LeadFilter a LinkedIn AI agent - Invite only Alpha waiting list</h1>
-
-  <p style="margin-bottom: 1.5rem; color: #ccc;">
-    Please complete the form below to reserve your spot in the invite only Alpha test for LeadFilter. 
-    Our cutting edge AI agent that automatically prioritizes the best job opportunities in your LinkedIn InMail allowing you to focus on what really matters.
-  </p>
-
-  <form id="waitlist-form">
+    <h1>LeadFilter – Invite-Only Alpha</h1>
+    
+    <p class="scarcity">Only 20 Alpha seats, reserve yours now!</p>
+    
+    <form id="waitlist-form">
       <label for="name">Name</label>
       <input id="name" name="name" required>
 
       <label for="email">Email address</label>
       <input id="email" name="email" type="email" required>
-
-      <label for="linkedin">LinkedIn profile URL (Optional)</label>
-      <input id="linkedin" name="linkedin">
-
-      <button type="submit">Join the Waitlist</button>
+      
+      <button type="submit">Reserve an Alpha Spot</button>
     </form>
+    
+<p class="fallback">
+  Can’t see the embedded form? 
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfW0TJTU3HA12fMg5nB5FUR4IdHQeoeptWRAk9QDjTaa53pqw/viewform" target="_blank">
+    Click here to join the waitlist.
+  </a>
+</p>
+
     <div id="message" class="success" style="display:none;">
-      Thank you for reserving your spot!
+      Thank you for reserving your spot!<br>
       We’ll send a confirmation email with next steps as soon as the LeadFilter Alpha begins.
     </div>
   </div>
