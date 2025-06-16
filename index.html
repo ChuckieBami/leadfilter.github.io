@@ -70,7 +70,7 @@
     document.getElementById('waitlist-form').addEventListener('submit', async e => {
       e.preventDefault();
       const data = new URLSearchParams(new FormData(e.target));
-      const res = await fetch('https://script.google.com/macros/s/AKfycbx474XXSthiw6AgUM08_5pMT2UhEf65Fsw9GBhhkgHLlAkqqMlLkcyxsWkn4MKqIcGvAQ/exec', {
+      const res = await fetch('https://script.google.com/macros/s/AKfycbx5Y_522cKGlzSClDY1r6mvoJlpl64_Ka8km43sX_VYMCEvNvWVPSfyEeMuhCn9Io4CFg/exec', {
         method: 'POST',
         body: data
       });
